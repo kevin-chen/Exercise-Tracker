@@ -31,7 +31,7 @@ export default class CreateUser extends Component {
         console.log(user);
 
         // axios sends a http request to endpoint, expecting a json body
-        axios.post('users/add', user)
+        axios.post('https://desolate-hollows-97928.herokuapp.com/users/add', user)
             .then(res => console.log(res.data));
 
         this.setState({
