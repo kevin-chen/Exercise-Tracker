@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect("mongodb+srv://kc3585:12345DB@cluster0-caogo.gcp.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://kc3585:process.env.pass@cluster0-caogo.gcp.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
